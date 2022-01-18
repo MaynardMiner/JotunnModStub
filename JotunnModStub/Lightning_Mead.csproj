@@ -7,8 +7,8 @@
     <ProjectGuid>{DEAF4438-8089-40ED-8175-398E1261D45B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>JotunnModStub</RootNamespace>
-    <AssemblyName>JotunnModStub</AssemblyName>
+    <RootNamespace>LightningMead</RootNamespace>
+    <AssemblyName>LightningMead</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -87,9 +87,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="DoPrebuild.props" />
+    <None Include="Environment.props" />
+    <EmbeddedResource Include="meadbase_light" />
+    <EmbeddedResource Include="mead_light" />
     <None Include="packages.config" />
-    <EmbeddedResource Include="Package\meadbase_light" />
-    <EmbeddedResource Include="Package\mead_light" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
