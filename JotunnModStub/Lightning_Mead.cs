@@ -41,6 +41,7 @@ namespace JotunnModStub
             // To learn more about Jotunn's features, go to
             // https://valheim-modding.github.io/Jotunn/tutorials/overview.html
 
+            // Load assets, add the item, and add the fermenter ItemConversion
             LoadAssets();
             CreateBlueprintMead();
             Create_Light_Mead();
@@ -61,6 +62,7 @@ namespace JotunnModStub
 
         private void LoadAssets()
         {
+            /// Load embedded assets for mead.
             Jotunn.Logger.LogInfo($"Embedded resources: {string.Join(",", typeof(Lightning_Mead).Assembly.GetManifestResourceNames())}");
             Meadbase_light = AssetUtils.LoadAssetBundleFromResources("meadbase_light", typeof(Lightning_Mead).Assembly);
             Jotunn.Logger.LogInfo($"Embedded resource name: {Meadbase_light.name}");
@@ -68,6 +70,7 @@ namespace JotunnModStub
             Jotunn.Logger.LogInfo($"Embedded resource name: {Mead_light.name}");
         }
 
+        /// This will create the mead base and add it to the game's item list as a CustomItem.
         private void CreateBlueprintMead()
         {
             // Create and add a custom item
@@ -84,31 +87,22 @@ namespace JotunnModStub
                     {
                         new RequirementConfig
                         {
-                            ///Wolf Fang x2
-                            ///Thunderstone x2
-                            ///Honey x10
                             Item = "Thunderstone",
-                            Amount = 2,           // These are all the defaults, so no need to specify
+                            Amount = 2,           
                             AmountPerLevel = 0,
                             Recover = false,
                         },
                         new RequirementConfig
                         {
-                            ///Wolf Fang x2
-                            ///Thunderstone x2
-                            ///Honey x10
                             Item = "Honey",
-                            Amount = 10,           // These are all the defaults, so no need to specify
+                            Amount = 10,           
                             AmountPerLevel = 0,
                             Recover = false,
                         },
                         new RequirementConfig
                         {
-                            ///Wolf Fang x2
-                            ///Thunderstone x2
-                            ///Honey x10
                             Item = "Crystal",
-                            Amount = 4,           // These are all the defaults, so no need to specify
+                            Amount = 4,        
                             AmountPerLevel = 0,
                             Recover = false,
                         }
@@ -118,6 +112,8 @@ namespace JotunnModStub
             ItemManager.Instance.AddItem(meadbase);
         }
 
+        // This creates the lightning mead itself. It is technically a non-craftable item as it is converted from fermenter.
+        // It needs to be added to the item list before I can actually create the fermenter converstion.
         private void Create_Light_Mead()
         {
             // Create and add a custom item
@@ -133,7 +129,8 @@ namespace JotunnModStub
         }
 
 
-
+        // This adds the ability to convert lightning mead base to lighning resist mead in the fermenter using
+        // Jotunn's CustomItemConversion function.
         private void AddConversions()
         {
             var light_meadbase = Meadbase_light.LoadAsset<GameObject>("MeadBaseLightResist");
