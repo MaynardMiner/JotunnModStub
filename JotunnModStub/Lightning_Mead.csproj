@@ -87,6 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Assets\Translations\English\LightningMead.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="DoPrebuild.props" />
     <None Include="Environment.props" />
     <EmbeddedResource Include="meadbase_light" />
