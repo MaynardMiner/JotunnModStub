@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 23244501062145929}
   - component: {fileID: 205146353372906496}
   - component: {fileID: 64386124796447743}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: stew
   m_TagString: Untagged
   m_Icon: {fileID: 0}

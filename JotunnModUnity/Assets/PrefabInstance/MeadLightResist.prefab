@@ -236,7 +236,7 @@ MonoBehaviour:
       m_dlc: 
       m_itemType: 2
       m_icons:
-      - {fileID: 21300174, guid: a178d75fd8bbda7499d004456459d7f4, type: 3}
+      - {fileID: 21300000, guid: 8b7d82135e2cb9b4b911eae0d18ccf9c, type: 3}
       m_attachOverride: 0
       m_description: $item_mead_lightres_description
       m_maxStackSize: 10

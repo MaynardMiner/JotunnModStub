@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225f75e0f7a1e3d48933010b3490c5d4, type: 3}
   m_Name: Potion_lightresist
   m_EditorClassIdentifier: 
-  m_name: $light_restistance_mead
+  m_name: $lightning_restistance_mead
   m_category: 
-  m_icon: {fileID: 21300000, guid: 443c76d1a77e6364490763396edd0948, type: 3}
+  m_icon: {fileID: 21300000, guid: 8b7d82135e2cb9b4b911eae0d18ccf9c, type: 3}
   m_flashIcon: 0
   m_cooldownIcon: 0
-  m_tooltip: $duration_30_minutes
+  m_tooltip: $duration_10_minutes
   m_attributes: 0
   m_startMessageType: 1
   m_startMessage: $se_potion_start
