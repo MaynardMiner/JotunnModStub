@@ -65,9 +65,7 @@ namespace JotunnModStub
             /// Load embedded assets for mead.
             Jotunn.Logger.LogInfo($"Embedded resources: {string.Join(",", typeof(Lightning_Mead).Assembly.GetManifestResourceNames())}");
             Meadbase_light = AssetUtils.LoadAssetBundleFromResources("meadbase_light", typeof(Lightning_Mead).Assembly);
-            Jotunn.Logger.LogInfo($"Embedded resource name: {Meadbase_light.name}");
             Mead_light = AssetUtils.LoadAssetBundleFromResources("mead_light", typeof(Lightning_Mead).Assembly);
-            Jotunn.Logger.LogInfo($"Embedded resource name: {Mead_light.name}");
         }
 
         /// This will create the mead base and add it to the game's item list as a CustomItem.
