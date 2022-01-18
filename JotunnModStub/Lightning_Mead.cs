@@ -51,13 +51,13 @@ namespace JotunnModStub
         private void FejdStartup_Awake(On.FejdStartup.orig_Awake orig, FejdStartup self)
         {
             // This code runs before Valheim's FejdStartup.Awake
-            Jotunn.Logger.LogInfo("FejdStartup is going to awake");
+            //Jotunn.Logger.LogInfo("FejdStartup is going to awake");
 
             // Call this method so the original game method is invoked
             orig(self);
 
             // This code runs after Valheim's FejdStartup.Awake
-            Jotunn.Logger.LogInfo("FejdStartup has awoken");
+            //Jotunn.Logger.LogInfo("FejdStartup has awoken");
         }
 
         private void LoadAssets()
@@ -79,8 +79,8 @@ namespace JotunnModStub
                     Amount = 1,
                     CraftingStation = "piece_cauldron",
                     MinStationLevel = 1,
-                    Name = "Mead Base: Lightning Resist",
-                    Description = "Needs to be fermented.",
+                    Name = "$light_meadbase_name", 
+                    Description = "$light_meadbase_description",
                     Requirements = new[]
                     {
                         new RequirementConfig
@@ -119,8 +119,8 @@ namespace JotunnModStub
             var mead = new CustomItem(light_mead, fixReference: false,
                 new ItemConfig
                 {
-                    Name = "Lightning Resist Mead",
-                    Description = "Offers Resistance vs. all lightning damage types",
+                    Name = "$light_mead_name",
+                    Description = "$light_mead_description",
                     Enabled = false
                 });
             ItemManager.Instance.AddItem(mead);

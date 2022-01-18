@@ -1,0 +1,8 @@
+{
+  "lightning_restistance_mead": "Lightning resistance mead",
+  "duration_10_minutes": "Duration: 10 minutes",
+  "light_meadbase_name": "Mead Base: Lightning Resist",
+  "light_meadbase_description": "Needs to be fermented.",
+  "light_mead_name": "Lightning Resist Mead",
+  "light_mead_description": "Offers Resistance vs. all lightning damage types"
+}
